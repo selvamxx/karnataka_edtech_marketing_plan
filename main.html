@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karnataka EdTech Event Strategy 2026–27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:       #0b0e17;
+  --ink2:      #151820;
+  --ink3:      #1e2235;
+  --surface:   #f5f3ee;
+  --surface2:  #ede9e1;
+  --surface3:  #e5e0d6;
+  --red:       #c0392b;
+  --green:     #1a6b3c;
+  --green2:    #229954;
+  --amber:     #d4860a;
+  --amber2:    #f0a820;
+  --amber-pale:#fef3d8;
+  --saffron:   #e07b10;   /* Karnataka's saffron */
+  --silk:      #8b1a4a;   /* Mysore silk red */
+  --tech:      #1a3a6e;   /* tech blue */
+  --tech2:     #2563a8;
+  --tech-pale: #dce8f8;
+  --text:      #12151f;
+  --text2:     #3a3d4d;
+  --text3:     #6b6e7e;
+  --border:    #ccc8be;
+  --rule:      #b8b3a5;
+  --white:     #ffffff;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',sans-serif;
+  background:var(--surface);
+  color:var(--text);
+  font-size:15px;
+  line-height:1.72;
+  overflow-x:hidden;
+}
+
+/* ── PROGRESS ───────────────────────── */
+#pbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--saffron),var(--amber2));width:0%;z-index:9999;transition:width .1s}
+
+/* ── SIDEBAR ────────────────────────── */
+#nav{
+  position:fixed;left:0;top:0;bottom:0;width:228px;
+  background:var(--ink);
+  display:flex;flex-direction:column;
+  z-index:200;border-right:1px solid #1e2235;
+}
+.nav-brand{
+  padding:24px 22px 20px;
+  border-bottom:1px solid #1e2235;
+}
+.nav-brand .ka{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.12em;
+  color:var(--amber);text-transform:uppercase;
+  margin-bottom:10px;
+}
+.nav-brand .ka span{
+  display:inline-block;padding:2px 6px;
+  background:rgba(212,134,10,.15);border:1px solid rgba(212,134,10,.25);
+  border-radius:2px;
+}
+.nav-brand h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;font-weight:700;
+  color:#e8e4de;line-height:1.3;
+}
+.nav-brand small{
+  display:block;font-size:10px;color:#44475a;
+  letter-spacing:.07em;margin-top:4px;
+  font-family:'JetBrains Mono',monospace;
+}
+
+.nav-links{flex:1;overflow-y:auto;padding:12px 0;}
+.nav-links a{
+  display:flex;align-items:center;gap:10px;
+  padding:9px 22px;
+  text-decoration:none;color:#5a5e74;
+  font-size:11px;font-weight:600;letter-spacing:.05em;
+  text-transform:uppercase;
+  border-left:2px solid transparent;
+  transition:all .2s;
+}
+.nav-links a:hover,.nav-links a.active{
+  color:var(--amber);border-left-color:var(--amber);
+  background:rgba(212,134,10,.07);
+}
+.nav-links a .n{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:#333545;flex-shrink:0;
+}
+.nav-links a.active .n{color:var(--amber2);}
+
+.nav-footer{
+  padding:16px 22px;border-top:1px solid #1e2235;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:#333545;line-height:1.6;
+}
+
+/* ── MAIN ───────────────────────────── */
+#main{margin-left:228px;min-height:100vh;}
+
+/* ── HERO ───────────────────────────── */
+#hero{
+  background:var(--ink);
+  min-height:580px;position:relative;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;
+}
+.hero-mesh{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 20%,rgba(26,58,110,.5) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 90%,rgba(139,26,74,.2) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 50% at 50% 50%,rgba(212,134,10,.06) 0%,transparent 70%);
+}
+.hero-dots{
+  position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.hero-kite{
+  /* Decorative Karnataka kite shape */
+  position:absolute;right:-60px;top:-60px;
+  width:380px;height:380px;
+  border:1px solid rgba(212,134,10,.1);
+  transform:rotate(15deg);
+  border-radius:4px;
+}
+.hero-kite2{
+  position:absolute;right:20px;top:20px;
+  width:280px;height:280px;
+  border:1px solid rgba(139,26,74,.12);
+  transform:rotate(15deg);
+  border-radius:4px;
+}
+
+.hero-inner{
+  position:relative;z-index:2;
+  padding:56px 56px 48px;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);
+  border:1px solid rgba(212,134,10,.3);
+  padding:5px 12px;margin-bottom:24px;
+  background:rgba(212,134,10,.07);
+}
+.hero-badge::before{content:'◈';font-size:8px;}
+
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(40px,5.5vw,68px);
+  font-weight:700;color:#fff;
+  line-height:1.05;
+  max-width:680px;margin-bottom:18px;
+}
+.hero-title em{font-style:italic;color:var(--amber);}
+.hero-title .ka-word{color:var(--saffron);}
+
+.hero-sub{
+  font-size:14px;color:#7a7d90;
+  max-width:520px;line-height:1.65;margin-bottom:40px;
+}
+
+.hero-stats{
+  display:flex;gap:0;
+  border-top:1px solid #1e2235;
+  padding-top:32px;flex-wrap:wrap;
+}
+.hstat{
+  padding:0 36px 0 0;
+  margin-right:36px;
+  border-right:1px solid #1e2235;
+}
+.hstat:last-child{border-right:none;}
+.hstat .v{
+  font-family:'Cormorant Garamond',serif;
+  font-size:34px;font-weight:700;
+  color:#fff;line-height:1;
+  display:block;margin-bottom:4px;
+}
+.hstat .v em{color:var(--amber);font-style:normal;}
+.hstat .l{font-size:10px;color:#44475a;text-transform:uppercase;letter-spacing:.08em;}
+
+/* ── STAT RIBBON ────────────────────── */
+.ribbon{
+  background:var(--ink2);
+  border-top:2px solid var(--saffron);
+  border-bottom:1px solid #1e2235;
+  display:grid;grid-template-columns:repeat(5,1fr);
+}
+.rb{
+  padding:18px 16px;border-right:1px solid #1e2235;
+  text-align:center;
+}
+.rb:last-child{border-right:none;}
+.rb .rv{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:700;
+  color:var(--amber);display:block;line-height:1;margin-bottom:4px;
+}
+.rb .rl{font-size:10px;color:#555770;text-transform:uppercase;letter-spacing:.07em;line-height:1.4;}
+
+/* ── SECTION ────────────────────────── */
+.sec{
+  padding:68px 56px;
+  border-bottom:1px solid var(--border);
+  opacity:0;transform:translateY(14px);
+  transition:opacity .5s ease,transform .5s ease;
+}
+.sec.vis{opacity:1;transform:translateY(0);}
+.sec:nth-child(even){background:var(--surface2);}
+
+.sec-hd{
+  display:flex;align-items:baseline;gap:14px;
+  margin-bottom:44px;padding-bottom:18px;
+  border-bottom:2px solid var(--ink);
+}
+.sec-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:var(--amber);
+  letter-spacing:.12em;padding:3px 8px;
+  background:rgba(212,134,10,.1);
+  border:1px solid rgba(212,134,10,.2);flex-shrink:0;
+}
+.sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(22px,3vw,34px);
+  font-weight:700;line-height:1.1;color:var(--ink);
+}
+.sec-intro{
+  font-size:14px;color:var(--text2);max-width:740px;
+  line-height:1.75;margin-bottom:36px;
+  padding-bottom:24px;border-bottom:1px dashed var(--rule);
+}
+
+/* ── CALLOUT ────────────────────────── */
+.box{padding:22px 26px;margin:24px 0;position:relative;}
+.box-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-weight:700;margin-bottom:8px;
+}
+.box p{font-size:13.5px;line-height:1.68;color:var(--text2);}
+.box.ink{background:var(--ink);color:#bbb;}
+.box.ink .box-title{color:var(--amber);}
+.box.ink p{color:#888;}
+.box.amber{background:var(--amber-pale);border-left:4px solid var(--amber);}
+.box.tech{background:var(--tech-pale);border-left:4px solid var(--tech);}
+.box.green{background:#d5edd9;border-left:4px solid var(--green);}
+.box.red{background:#fde8e6;border-left:4px solid var(--red);}
+.box.silk{background:#f8e8f0;border-left:4px solid var(--silk);}
+.box.saffron{background:#fff0e0;border-left:4px solid var(--saffron);}
+
+/* ── INTENT GRID ────────────────────── */
+.intent{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);margin-bottom:28px;}
+.icol{border-right:1px solid var(--border);}
+.icol:last-child{border-right:none;}
+.icol-h{
+  padding:14px 18px;font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  border-bottom:2px solid var(--border);
+  font-family:'JetBrains Mono',monospace;
+}
+.icol:nth-child(1) .icol-h{background:var(--ink);color:var(--amber);}
+.icol:nth-child(2) .icol-h{background:var(--tech);color:#fff;}
+.icol:nth-child(3) .icol-h{background:var(--saffron);color:#fff;}
+.iq{
+  padding:9px 18px;font-size:12px;
+  font-family:'JetBrains Mono',monospace;
+  color:var(--text2);border-bottom:1px solid #eae7e0;
+  display:flex;align-items:center;gap:8px;
+}
+.iq::before{content:'↗';color:var(--text3);flex-shrink:0;}
+
+/* ── TREND CARDS ────────────────────── */
+.trend{
+  display:grid;grid-template-columns:72px 1fr;
+  border:1px solid var(--border);margin-bottom:14px;overflow:hidden;
+}
+.trend-n{
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;font-weight:700;color:var(--amber);
+}
+.trend-b{padding:18px 22px;background:#fff;}
+.trend-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;font-weight:700;color:var(--ink);margin-bottom:10px;
+}
+.trend-sub{font-size:13px;color:var(--text2);line-height:1.6;}
+.trend-tags{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;}
+.tag{
+  font-size:10px;font-family:'JetBrains Mono',monospace;
+  padding:3px 8px;border-radius:2px;font-weight:500;letter-spacing:.06em;
+}
+.tag.ka{background:rgba(212,134,10,.15);color:var(--amber);}
+.tag.policy{background:var(--tech-pale);color:var(--tech);}
+.tag.opportunity{background:#d5edd9;color:var(--green);}
+
+/* ── PSYCH GRID ─────────────────────── */
+.psych-wrap{margin-bottom:40px;}
+.buyer-lbl{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--ink);color:var(--amber);
+  padding:10px 20px;margin-bottom:16px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:700;
+}
+.buyer-lbl small{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:#444;font-style:normal;
+}
+.psych-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:16px;}
+.psych-c{border:1px solid var(--border);overflow:hidden;}
+.psych-h{padding:12px 18px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-family:'JetBrains Mono',monospace;}
+.psych-c.wants .psych-h{background:var(--tech);color:#fff;}
+.psych-c.fears .psych-h{background:var(--red);color:#fff;}
+.psych-body{padding:14px 18px;background:#fff;}
+.psych-body li{
+  font-size:13px;color:var(--text2);padding:5px 0 5px 18px;
+  border-bottom:1px dotted #eee;list-style:none;position:relative;
+}
+.psych-body li:last-child{border-bottom:none;}
+.wants li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;font-size:11px;}
+.fears li::before{content:'✕';position:absolute;left:0;color:var(--red);font-weight:700;font-size:11px;}
+
+/* ── COMPETITOR ─────────────────────── */
+.comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px;}
+.cc{background:#fff;border:1px solid var(--border);overflow:hidden;}
+.cc-h{padding:16px 18px;}
+.cc-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:#fff;}
+.cc-tag{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55);font-family:'JetBrains Mono',monospace;}
+.cc:nth-child(1) .cc-h{background:var(--ink);}
+.cc:nth-child(2) .cc-h{background:var(--tech);}
+.cc:nth-child(3) .cc-h{background:var(--green);}
+.cc-body{padding:16px 18px;}
+.cc-body li{font-size:12.5px;color:var(--text2);padding:5px 0 5px 16px;position:relative;border-bottom:1px dotted #eee;list-style:none;}
+.cc-body li::before{content:'·';position:absolute;left:4px;color:var(--amber);font-size:20px;line-height:1;top:1px;}
+.cc-weak{margin-top:12px;padding:9px 14px;background:#fdf8f2;border-left:3px solid var(--saffron);font-size:12px;color:var(--saffron);}
+
+/* ── FAIL GRID ──────────────────────── */
+.fail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.fail-item{background:#fff;border:1px solid var(--border);padding:20px;position:relative;overflow:hidden;}
+.fail-item::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red);}
+.fail-n{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--red);margin-bottom:8px;letter-spacing:.1em;}
+.fail-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;margin-bottom:8px;color:var(--ink);}
+.fail-body{font-size:13px;color:var(--text2);line-height:1.6;}
+
+/* ── EVENT BLOCKS ───────────────────── */
+.ev{border:1px solid var(--border);margin-bottom:40px;overflow:hidden;}
+.ev-h{background:var(--ink);padding:28px 32px;position:relative;overflow:hidden;}
+.ev-h::before{
+  content:'';position:absolute;right:-50px;top:-50px;
+  width:220px;height:220px;border-radius:50%;
+  background:rgba(212,134,10,.05);
+}
+.ev-badge{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--amber);margin-bottom:10px;display:block;
+}
+.ev-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;font-weight:700;color:#fff;margin-bottom:6px;
+}
+.ev-tag{font-size:13.5px;color:#6a7090;font-style:italic;max-width:600px;}
+
+.ev-tabs{display:flex;border-bottom:1px solid var(--border);background:#fafaf7;}
+.ev-tab{
+  padding:11px 18px;font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;
+  cursor:pointer;border-right:1px solid var(--border);
+  border-bottom:2px solid transparent;color:var(--text3);
+  transition:all .2s;font-family:'JetBrains Mono',monospace;
+  background:none;border-top:none;border-left:none;
+}
+.ev-tab.active{color:var(--amber);border-bottom-color:var(--amber);background:#fff;}
+
+.ev-panel{display:none;padding:26px 32px;background:#fff;}
+.ev-panel.active{display:block;}
+.ev-panel ul{list-style:none;}
+.ev-panel ul li{
+  padding:7px 0 7px 22px;position:relative;
+  font-size:13.5px;color:var(--text2);
+  border-bottom:1px dotted #e5e1d8;line-height:1.6;
+}
+.ev-panel ul li:last-child{border-bottom:none;}
+.ev-panel ul li::before{content:'→';position:absolute;left:0;color:var(--amber);font-weight:700;}
+.ev-panel ul li strong{font-weight:700;color:var(--ink);}
+
+.ev-conv{
+  background:var(--ink2);border-top:2px solid var(--amber);
+  padding:18px 32px;display:flex;align-items:center;gap:16px;
+}
+.ev-conv-lbl{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--amber);white-space:nowrap;
+}
+.ev-conv-rate{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;font-weight:700;color:#fff;
+}
+.ev-conv-note{font-size:12px;color:#555;}
+
+/* ── CITY MAP TABLE ─────────────────── */
+.city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:28px;}
+.city-c{background:#fff;padding:18px 16px;text-align:center;}
+.city-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.city-type{font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:8px;display:block;}
+.city-pts li{font-size:11.5px;color:var(--text2);text-align:left;padding:3px 0 3px 12px;list-style:none;position:relative;border-bottom:1px dotted #eee;}
+.city-pts li:last-child{border-bottom:none;}
+.city-pts li::before{content:'·';position:absolute;left:2px;color:var(--amber);font-size:16px;line-height:1;top:0;}
+
+/* ── COMPARISON TABLE ───────────────── */
+.cmp{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:32px;}
+.cmp th{padding:13px 14px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-family:'JetBrains Mono',monospace;}
+.cmp th:first-child{background:var(--ink);color:var(--amber);}
+.cmp th:nth-child(2){background:var(--tech2);color:#fff;}
+.cmp th:nth-child(3){background:var(--green);color:#fff;}
+.cmp th:last-child{background:var(--saffron);color:#fff;}
+.cmp td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-size:13px;}
+.cmp tr:nth-child(odd) td{background:#fafaf7;}
+.cmp td:first-child{font-weight:700;color:var(--ink);background:#f2efe8!important;}
+.cmp td:last-child{background:#fff5ea!important;font-weight:600;color:var(--saffron);}
+
+/* ── TIMELINE ───────────────────────── */
+.tl{position:relative;padding-left:34px;margin:28px 0;}
+.tl::before{content:'';position:absolute;left:9px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--amber),var(--saffron));}
+.tl-item{position:relative;margin-bottom:26px;}
+.tl-item::before{content:'';position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--amber);border:2px solid var(--surface);z-index:1;}
+.tl-wk{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:4px;}
+.tl-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;margin-bottom:5px;color:var(--ink);}
+.tl-body{font-size:13px;color:var(--text2);}
+
+/* ── POSITIONING ────────────────────── */
+.pos-blk{
+  background:var(--ink);padding:52px 56px;text-align:center;
+  margin:36px 0;position:relative;overflow:hidden;
+}
+.pos-blk::before{
+  content:'"';position:absolute;top:-30px;left:28px;
+  font-family:'Cormorant Garamond',serif;font-size:240px;
+  color:rgba(212,134,10,.05);line-height:1;
+}
+.pos-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--amber);margin-bottom:14px;}
+.pos-txt{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(18px,2.5vw,27px);font-style:italic;
+  color:#fff;max-width:760px;margin:0 auto 18px;line-height:1.5;
+}
+.pos-div{width:60px;height:2px;background:var(--amber);margin:22px auto;}
+
+/* ── SOURCES ────────────────────────── */
+.src-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:16px;}
+.src{
+  padding:9px 14px;background:#fff;border:1px solid var(--border);
+  border-left:3px solid var(--ink);font-size:11.5px;
+  color:var(--text2);font-family:'JetBrains Mono',monospace;
+}
+
+/* ── FOOTER ─────────────────────────── */
+.foot{
+  background:var(--ink);padding:52px 56px;
+  border-top:3px solid var(--amber);
+}
+.foot h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;color:var(--amber);margin-bottom:16px;
+}
+.foot p{font-size:13.5px;color:#888;margin-bottom:12px;}
+.foot ul{list-style:none;}
+.foot ul li{
+  padding:7px 0 7px 18px;position:relative;
+  font-size:13.5px;color:#666;border-bottom:1px solid #1e2235;
+}
+.foot ul li::before{content:'→';position:absolute;left:0;color:var(--amber2);}
+
+/* ── UTILITY ────────────────────────── */
+h2{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--ink);margin:28px 0 12px;}
+h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--tech);margin:22px 0 10px;}
+p{font-size:14px;line-height:1.72;color:var(--text2);margin-bottom:12px;}
+ul{list-style:none;}
+ul li{padding:5px 0 5px 20px;position:relative;font-size:13.5px;color:var(--text2);border-bottom:1px dotted #e5e1d8;}
+ul li:last-child{border-bottom:none;}
+ul li::before{content:'→';position:absolute;left:0;color:var(--amber);font-size:12px;}
+
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--surface);}
+::-webkit-scrollbar-thumb{background:var(--ink3);}
+</style>
+</head>
+<body>
+
+<div id="pbar"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-brand">
+    <div class="ka"><span>ಕರ್ನಾಟಕ</span> Karnataka</div>
+    <h2>EdTech Event<br>Strategy 2026–27</h2>
+    <small>SMART CLASSROOM · VR LABS · DIGITAL CONTENT</small>
+  </div>
+  <div class="nav-links">
+    <a href="#hero" class="active"><span class="n">00</span> Overview</a>
+    <a href="#s1"><span class="n">01</span> Search Intent</a>
+    <a href="#s2"><span class="n">02</span> Karnataka Market</a>
+    <a href="#s3"><span class="n">03</span> City Landscape</a>
+    <a href="#s4"><span class="n">04</span> Buyer Psychology</a>
+    <a href="#s5"><span class="n">05</span> Competitor Landscape</a>
+    <a href="#s6"><span class="n">06</span> Why Events Fail</a>
+    <a href="#s7"><span class="n">07</span> Event Strategy</a>
+    <a href="#s8"><span class="n">08</span> Final Recommendation</a>
+  </div>
+  <div class="nav-footer">
+    CONFIDENTIAL<br>
+    AY 2026–27 PLANNING<br>
+    MARCH 2026
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div id="main">
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-kite"></div>
+  <div class="hero-kite2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Karnataka Focus · EdTech B2B Strategy · Academic Year 2026–27</div>
+    <h1 class="hero-title">
+      <span class="ka-word">Karnataka</span><br>
+      School EdTech<br>
+      <em>Event Strategy</em>
+    </h1>
+    <p class="hero-sub">A field-ready, Karnataka-specific plan to attract and convert school owners, principals, and institutions before AY 2026–27 — from Bengaluru to Belagavi.</p>
+    <div class="hero-stats">
+      <div class="hstat">
+        <span class="v">3,<em>862</em></span>
+        <span class="l">Govt. schools cleared for smart classrooms (Feb 2026)</span>
+      </div>
+      <div class="hstat">
+        <span class="v">₹<em>91.5</em>Cr</span>
+        <span class="l">Karnataka smart classroom budget approved</span>
+      </div>
+      <div class="hstat">
+        <span class="v"><em>80</em>K+</span>
+        <span class="l">Total Karnataka government schools</span>
+      </div>
+      <div class="hstat">
+        <span class="v"><em>2,495</em></span>
+        <span class="l">EdTech companies based in Bengaluru</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RIBBON -->
+<div class="ribbon">
+  <div class="rb"><span class="rv">₹91.5Cr</span><span class="rl">Karnataka smart classroom budget 2026</span></div>
+  <div class="rb"><span class="rv">3,862</span><span class="rl">Govt schools getting smart classrooms</span></div>
+  <div class="rb"><span class="rv">KSEP 2025</span><span class="rl">State Education Policy mandates digital infra</span></div>
+  <div class="rb"><span class="rv">$226M</span><span class="rl">EdTech funding raised in Bengaluru (2025)</span></div>
+  <div class="rb"><span class="rv">Apr–Jun</span><span class="rl">Critical decision window for AY 2026–27</span></div>
+</div>
+
+<!-- S1: SEARCH INTENT -->
+<section class="sec" id="s1">
+  <div class="sec-hd">
+    <span class="sec-num">01</span>
+    <h1 class="sec-title">What Karnataka School Decision-Makers Are Searching</h1>
+  </div>
+  <p class="sec-intro">School owners, principals, and administrators across Karnataka — from Bengaluru to Mysuru to Hubli — are searching for very specific things right now. Understanding these searches tells you exactly what message to lead with in your event invites, content, and conversations.</p>
+
+  <div class="intent">
+    <div class="icol">
+      <div class="icol-h">Admissions / Growth Intent</div>
+      <div class="iq">How to increase school admissions Bengaluru 2026</div>
+      <div class="iq">School admission marketing Karnataka</div>
+      <div class="iq">How to attract NRI parents to our school</div>
+      <div class="iq">Compete with CBSE schools near Whitefield</div>
+      <div class="iq">School branding Mysuru / Mangaluru</div>
+      <div class="iq">Why parents prefer international curriculum schools</div>
+      <div class="iq">School open house ideas to attract parents</div>
+    </div>
+    <div class="icol">
+      <div class="icol-h">Academic Improvement Intent</div>
+      <div class="iq">SSLC / PUC result improvement strategy</div>
+      <div class="iq">Student engagement technology Karnataka classrooms</div>
+      <div class="iq">Karnataka State Board digital content</div>
+      <div class="iq">NEP 2020 Karnataka implementation schools</div>
+      <div class="iq">DSERT Karnataka teacher digital training</div>
+      <div class="iq">How to reduce student dropout Karnataka</div>
+      <div class="iq">AI LMS for CBSE ICSE schools Bengaluru</div>
+    </div>
+    <div class="icol">
+      <div class="icol-h">Infrastructure / Tech Intent</div>
+      <div class="iq">Smart classroom setup cost Bengaluru 2025 2026</div>
+      <div class="iq">VR lab for schools Karnataka price</div>
+      <div class="iq">Samagra Shiksha Karnataka smart classroom</div>
+      <div class="iq">EdTech vendors for schools in Karnataka</div>
+      <div class="iq">Interactive flat panel vs smart board India</div>
+      <div class="iq">Government scheme smart classroom Karnataka</div>
+      <div class="iq">ROI of smart classroom private school</div>
+    </div>
+  </div>
+
+  <div class="box amber">
+    <div class="box-title">Admissions Intent — The Karnataka-Specific Reality</div>
+    <p>Karnataka's school market is uniquely competitive. Bengaluru alone has 500+ private schools competing within overlapping catchment zones. Mysuru, Mangaluru, Hubli-Dharwad each have 80–150+ private schools competing for the same fee-paying families. School owners are not just searching for marketing tips — they are searching for a <strong>visible differentiator</strong> that justifies higher fees and wins over parents who have 20+ school choices. EdTech infrastructure — particularly VR labs and smart classrooms — has become the single most visible differentiator during school open days and admission walkthroughs in Karnataka's premium school segment.</p>
+  </div>
+
+  <div class="box tech">
+    <div class="box-title">Infrastructure Intent — The Government Signal Working in Your Favour</div>
+    <p>In February 2026, Karnataka approved ₹91.54 crore to install smart classrooms in 3,862 government schools under Samagra Shikshana Karnataka. This government action is a double trigger for private school owners: <strong>(1)</strong> It validates smart classrooms as the new standard — not a luxury. <strong>(2)</strong> It creates urgency — if government schools are getting smart classrooms, private schools must upgrade to stay ahead. Use this data explicitly in your event conversations. It is one of the most powerful FOMO triggers available to you right now.</p>
+  </div>
+
+  <div class="box red">
+    <div class="box-title">The FOGS Effect Is Strong in Karnataka — Handle It Directly</div>
+    <p>Karnataka was BYJU'S home state. Bengaluru is where BYJU'S was born, where its offices were, and where the trust collapse hit hardest. Many Karnataka school owners personally know teachers, principals, or parents who were directly affected by BYJU'S promises that were not delivered. This means the <strong>FOGS (Fear of Getting Scammed) mindset is MORE intense in Karnataka</strong> than in other states. Your event must address this fear head-on — not avoid it. Acknowledge it, show your track record, offer a risk-reversing pilot, and let your existing Karnataka school clients speak for you.</p>
+  </div>
+</section>
+
+<!-- S2: KARNATAKA MARKET -->
+<section class="sec" id="s2">
+  <div class="sec-hd">
+    <span class="sec-num">02</span>
+    <h1 class="sec-title">Karnataka EdTech Market — What the Data Shows</h1>
+  </div>
+  <p class="sec-intro">Karnataka is not just another Indian state — it is the EdTech capital of India. Understanding the specific market dynamics here shapes every element of your event strategy.</p>
+
+  <div class="trend">
+    <div class="trend-n">1</div>
+    <div class="trend-b">
+      <div class="trend-title">Karnataka Just Approved ₹91.54 Crore for 3,862 Smart Classrooms in Government Schools</div>
+      <div class="trend-sub">The Karnataka government cleared this budget in February 2026 under Samagra Shikshana Karnataka, covering 1,631 higher primary schools, 95 schools from 2024-25, 1,326 schools in 2025-26, and 2,810 high schools. Each classroom costs ₹2.4 lakh to set up. This is a massive market signal: <strong>smart classrooms are now official state policy in Karnataka</strong> — not optional extras. For private school owners, this is both validation and a competitive threat. If government schools are upgrading, private schools cannot afford to stay behind.</div>
+      <div class="trend-tags">
+        <span class="tag ka">Karnataka-Specific</span>
+        <span class="tag policy">State Policy</span>
+        <span class="tag opportunity">Event Talking Point</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trend">
+    <div class="trend-n">2</div>
+    <div class="trend-b">
+      <div class="trend-title">Karnataka State Education Policy 2025 Mandates Digital Infrastructure</div>
+      <div class="trend-sub">The Karnataka SEP 2025 explicitly promotes digital infrastructure and smart classrooms as part of the state's new education framework. It also converts DSERT into an autonomous SCERT and mandates experiential learning — both of which require the kind of technology your company provides. For private schools, alignment with KSEP 2025 is becoming a reputational and inspection-time requirement. Schools that cannot show digital readiness will face increasing pressure from both regulators and parents who are aware of the policy.</div>
+      <div class="trend-tags">
+        <span class="tag ka">Karnataka-Specific</span>
+        <span class="tag policy">Compliance Trigger</span>
+        <span class="tag opportunity">Pitch Angle</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trend">
+    <div class="trend-n">3</div>
+    <div class="trend-b">
+      <div class="trend-title">Bengaluru Is India's EdTech Capital — But Private Schools Are Still Underserved</div>
+      <div class="trend-sub">Bengaluru hosts 2,495 EdTech companies and received $226M in EdTech funding in 2025 alone — a 154% rise over 2024 (Tracxn, 2025). Yet the majority of this activity is in test-prep and higher-ed platforms, not in school infrastructure. The B2B school technology space in Karnataka's private school segment remains significantly underserved. Bengaluru-based Educational Initiatives acquired Open Door Education's 150-school network in September 2025, showing active consolidation — but smart classroom infrastructure remains the biggest gap. Your company sits in this gap.</div>
+      <div class="trend-tags">
+        <span class="tag ka">Bengaluru Focus</span>
+        <span class="tag opportunity">Market Gap</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trend">
+    <div class="trend-n">4</div>
+    <div class="trend-b">
+      <div class="trend-title">Karnataka Parents Are the Most Tech-Literate Buyer Segment in India</div>
+      <div class="trend-sub">Bengaluru is home to over 1.5 million IT professionals. Their children are in private schools across the city. These are parents who work at Infosys, Wipro, TCS, and global MNCs — they understand technology, they expect it in classrooms, and they ask specifically about smart boards, VR labs, and digital content during school admissions visits. Karnataka parents are among the highest-paying and most technologically demanding private school parent segments in India. Schools that cannot demonstrate EdTech capability are actively losing this demographic to competitors who can.</div>
+      <div class="trend-tags">
+        <span class="tag ka">Karnataka-Specific</span>
+        <span class="tag opportunity">Admissions Trigger</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trend">
+    <div class="trend-n">5</div>
+    <div class="trend-b">
+      <div class="trend-title">Karnataka's Tier 2 Cities Are the Emerging Opportunity — Less Competition, High Aspiration</div>
+      <div class="trend-sub">While Bengaluru gets most attention, cities like Mysuru, Hubli-Dharwad, Mangaluru, Belagavi, Davangere, and Shivamogga are experiencing rapid private school growth driven by urbanisation and rising disposable income. Importantly, EdTech vendor penetration in these cities is significantly lower than Bengaluru. School owners in Tier 2 Karnataka cities are actively aspirational — they want to bring Bengaluru-level technology to their schools. Your event can specifically target these cities with a message: "Bengaluru schools are already doing this — here's how your school in Mysuru / Hubli can lead your city."</div>
+      <div class="trend-tags">
+        <span class="tag ka">Tier 2 Karnataka</span>
+        <span class="tag opportunity">Underserved Market</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3: CITY LANDSCAPE -->
+<section class="sec" id="s3">
+  <div class="sec-hd">
+    <span class="sec-num">03</span>
+    <h1 class="sec-title">Karnataka City-by-City Opportunity Landscape</h1>
+  </div>
+  <p class="sec-intro">Each Karnataka city has a distinct school market with different dynamics, buyer mindsets, and conversion triggers. Tailor your event invites and follow-up messaging accordingly.</p>
+
+  <div class="city-grid">
+    <div class="city-c">
+      <div class="city-type">★ Primary Target</div>
+      <div class="city-name">Bengaluru</div>
+      <ul class="city-pts">
+        <li>500+ competing private schools</li>
+        <li>IT-parent demographic (highest fee-paying)</li>
+        <li>NRI, IB, IGCSE school competition intense</li>
+        <li>VR labs already a differentiator in premium schools</li>
+        <li>EdTech awareness is highest — so is FOGS</li>
+        <li>Key zones: Whitefield, Sarjapur, Hebbal, Yelahanka, JP Nagar</li>
+      </ul>
+    </div>
+    <div class="city-c">
+      <div class="city-type">Secondary Target</div>
+      <div class="city-name">Mysuru</div>
+      <ul class="city-pts">
+        <li>Heritage education city — high aspirational parents</li>
+        <li>100+ private schools competing in compact area</li>
+        <li>Low EdTech vendor penetration vs Bengaluru</li>
+        <li>Strong CBSE/ICSE school growth post-2020</li>
+        <li>"Be the first in Mysuru" is a powerful hook</li>
+        <li>School owners here respond to peer Bengaluru stories</li>
+      </ul>
+    </div>
+    <div class="city-c">
+      <div class="city-type">Secondary Target</div>
+      <div class="city-name">Mangaluru</div>
+      <ul class="city-pts">
+        <li>High-income coastal city, educated parent base</li>
+        <li>Strong Catholic school tradition (premium segment)</li>
+        <li>Gulf-returnee parent influence — globally aware</li>
+        <li>School owners are quality-focused, price-sensitive</li>
+        <li>ROI conversation works best here</li>
+        <li>Low smart classroom vendor presence currently</li>
+      </ul>
+    </div>
+    <div class="city-c">
+      <div class="city-type">Growth Target</div>
+      <div class="city-name">Hubli-Dharwad / Belagavi</div>
+      <ul class="city-pts">
+        <li>North Karnataka's fastest-growing school markets</li>
+        <li>Rising middle class, increasing fee-paying capacity</li>
+        <li>School owners are highly competitive locally</li>
+        <li>Very low EdTech penetration = first-mover advantage</li>
+        <li>Strong aspiration to match Bengaluru schools</li>
+        <li>Ideal for pilot school partnerships</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box saffron">
+    <div class="box-title">Event Invite Strategy by City</div>
+    <p><strong>Bengaluru:</strong> Frame around staying ahead — "Your competitor 3km away is installing this." Urgency + competition. <strong>Mysuru/Mangaluru:</strong> Frame around being the first — "Be the school Mysuru parents talk about." First-mover prestige. <strong>Hubli/Belagavi:</strong> Frame around transformation — "What Bengaluru schools did 5 years ago, Hubli's best schools are doing now." Aspiration. Each city needs its own invite language. One generic invite will underperform in every city.</p>
+  </div>
+</section>
+
+<!-- S4: BUYER PSYCHOLOGY -->
+<section class="sec" id="s4">
+  <div class="sec-hd">
+    <span class="sec-num">04</span>
+    <h1 class="sec-title">Buyer Psychology — Karnataka Edition</h1>
+  </div>
+  <p class="sec-intro">Karnataka school buyers have specific local context that shapes their psychology. What works in Delhi or Mumbai does not always work here. Here is the Karnataka-specific reality for each buyer type.</p>
+
+  <div class="psych-wrap">
+    <div class="buyer-lbl">Karnataka School Owners <small>ENTREPRENEUR + TRUSTEE MINDSET</small></div>
+    <div class="psych-grid">
+      <div class="psych-c wants">
+        <div class="psych-h">What They WANT</div>
+        <ul class="psych-body">
+          <li>Admissions edge over the 20+ schools in their area</li>
+          <li>Justify ₹60,000–₹1.5L annual fees to IT-sector parents</li>
+          <li>Fast ROI — Karnataka school owners are acute business thinkers</li>
+          <li>Something they can show on their school's social media</li>
+          <li>Peer validation from another Karnataka school owner</li>
+          <li>Implementation that doesn't disrupt current academic year</li>
+        </ul>
+      </div>
+      <div class="psych-c fears">
+        <div class="psych-h">What They FEAR</div>
+        <ul class="psych-body">
+          <li>BYJU'S-style contract lock-in and broken promises</li>
+          <li>IT-parent parents asking technical questions they can't answer</li>
+          <li>Spending ₹5–15L and not seeing admission uplift</li>
+          <li>Competing school installing it first in their neighbourhood</li>
+          <li>Teachers unable to use the system (wasted investment)</li>
+          <li>Vendor disappearing after installation — no support</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box amber">
+      <div class="box-title">The Karnataka School Owner Trigger — Specific and Actionable</div>
+      <p>Karnataka school owners, especially in Bengaluru, respond to <strong>specific local competitive threats</strong>. Telling them "a school 2 km from yours in Whitefield just installed this and is using it in their admission brochure" is 10x more powerful than national-level claims. Build a database of which schools in their specific areas have already adopted technology. Use this in your event conversations — it turns an abstract benefit into an immediate local urgency.</p>
+    </div>
+  </div>
+
+  <div class="psych-wrap">
+    <div class="buyer-lbl">Karnataka Principals <small>SSLC / PUC / BOARD RESULT PRESSURE</small></div>
+    <div class="psych-grid">
+      <div class="psych-c wants">
+        <div class="psych-h">What They WANT</div>
+        <ul class="psych-body">
+          <li>Improvement in SSLC and PUC board results (the Karnataka benchmark)</li>
+          <li>Student engagement tools — especially for Classes 8–10</li>
+          <li>Content aligned to Karnataka State Board, CBSE, and ICSE</li>
+          <li>Teacher tools that reduce lesson preparation time</li>
+          <li>Something that impresses parents during school visits</li>
+          <li>Recognition from their management for a good technology call</li>
+        </ul>
+      </div>
+      <div class="psych-c fears">
+        <div class="psych-h">What They FEAR</div>
+        <ul class="psych-body">
+          <li>Content not matching Karnataka State Board / DSERT syllabus</li>
+          <li>Teachers refusing to use the technology</li>
+          <li>Technology breaking down during parent visit / inspection</li>
+          <li>Being blamed if investment doesn't improve results</li>
+          <li>Language barrier — Kannada medium content gaps</li>
+          <li>No measurable outcome data to show after 6 months</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box green">
+      <div class="box-title">Critical: Karnataka State Board and Kannada Content Is Non-Negotiable</div>
+      <p>Karnataka principals — especially in Tier 2 cities — will immediately ask: <strong>"Is your content available in Kannada? Does it cover Karnataka State Board syllabus?"</strong> This is the single most common objection for EdTech vendors in Karnataka outside Bengaluru. If your content covers the Karnataka State Board curriculum in addition to CBSE/ICSE, make this the centrepiece of your principal-facing messaging. If there are gaps, be honest and show your roadmap. Attempting to gloss over this will destroy trust instantly with Karnataka educators.</p>
+    </div>
+  </div>
+
+  <div class="psych-wrap">
+    <div class="buyer-lbl">Government / Institutional Buyers <small>SAMAGRA SHIKSHA + COMPLIANCE MINDSET</small></div>
+    <ul>
+      <li>Driven by the Samagra Shikshana Karnataka programme — must show digital infrastructure progress for funding compliance</li>
+      <li>KSEP 2025 creates new inspection criteria around digital infrastructure — schools want to be ready</li>
+      <li>Decisions are committee-based, require DISE/UDISE data alignment and formal quotations</li>
+      <li>Government empanelment is a prerequisite — if you're not empanelled, you cannot convert government schools</li>
+      <li>Most powerful trigger: another district's government school cluster already using your product</li>
+      <li>For office events: engage with formal documentation packets, policy alignment briefs, and reference letters from existing government school clients</li>
+    </ul>
+  </div>
+
+  <div class="box ink">
+    <div class="box-title">The Karnataka FOGS Effect — More Intense Than Any Other State</div>
+    <p>BYJU'S was born in Bengaluru. Many Karnataka school owners and principals attended BYJU'S presentations, signed contracts, and felt burned when the company collapsed. Beyond BYJU'S, Karnataka's tech-literate school owner community has been approached by dozens of EdTech vendors who over-promised and under-delivered. <strong>Do not open your event with product features or pricing.</strong> Open by acknowledging this history: "We know you've seen a lot of EdTech promises. Today we're going to show you proof — from schools right here in Karnataka." Then let your existing Karnataka clients speak. This approach will differentiate you from every other vendor in the room within the first 10 minutes.</p>
+  </div>
+</section>
+
+<!-- S5: COMPETITORS -->
+<section class="sec" id="s5">
+  <div class="sec-hd">
+    <span class="sec-num">05</span>
+    <h1 class="sec-title">Competitor Landscape in Karnataka</h1>
+  </div>
+  <p class="sec-intro">Understanding who else is selling to Karnataka schools — and how — reveals exactly where your differentiation opportunity lies.</p>
+
+  <div class="comp-grid">
+    <div class="cc">
+      <div class="cc-h">
+        <div class="cc-name">LEAD School</div>
+        <div class="cc-tag">Ecosystem / Outcome Play</div>
+      </div>
+      <ul class="cc-body">
+        <li>Significant presence in Karnataka, especially in Bengaluru's mid-premium segment</li>
+        <li>Bundles curriculum, teacher training, assessments, and parent app — not just hardware</li>
+        <li>Sales approach: school visits by dedicated reps, principal-first conversations</li>
+        <li>Messaging: "Complete school system" — targets academic improvement outcomes</li>
+        <li>Karnataka schools pay ₹8,000–₹15,000+ per student per year</li>
+      </ul>
+      <div class="cc-weak"><strong>Gap:</strong> Too expensive for Tier 2 Karnataka schools. Long lock-in. No hardware. Not customisable for Karnataka State Board schools.</div>
+    </div>
+    <div class="cc">
+      <div class="cc-h">
+        <div class="cc-name">Extramarks</div>
+        <div class="cc-tag">Content + Tech Bundle</div>
+      </div>
+      <ul class="cc-body">
+        <li>Active in Bengaluru's CBSE school market — less strong in Karnataka State Board</li>
+        <li>Launched AI suite "Extra Intelligence" July 2025 — positioned for premium schools</li>
+        <li>Demo centres in Bengaluru for school visits</li>
+        <li>Strong on content depth for CBSE — weaker on Karnataka State Board / Kannada content</li>
+        <li>Pricing is high — schools in Mysuru and Tier 2 cities often find it unaffordable</li>
+      </ul>
+      <div class="cc-weak"><strong>Gap:</strong> Weak Karnataka State Board coverage. Premium pricing blocks Tier 2 Karnataka market. Not hardware-focused.</div>
+    </div>
+    <div class="cc">
+      <div class="cc-h">
+        <div class="cc-name">Local / Regional Vendors</div>
+        <div class="cc-tag">Hardware-Only Players</div>
+      </div>
+      <ul class="cc-body">
+        <li>Many local hardware dealers in Bengaluru, Mysuru, Hubli selling smart boards and projectors</li>
+        <li>No content, no digital curriculum, no VR — just hardware installation</li>
+        <li>Compete purely on price — often win initial hardware contracts</li>
+        <li>Schools are then left with hardware and no content strategy — creating dissatisfied customers</li>
+        <li>These unhappy schools are your highest-quality prospects — they have hardware but no solution</li>
+      </ul>
+      <div class="cc-weak"><strong>Gap:</strong> Hardware without content = unused investment. These schools are actively looking for content and support solutions right now.</div>
+    </div>
+  </div>
+
+  <div class="box amber">
+    <div class="box-title">Your Differentiation in the Karnataka Market</div>
+    <p>The Karnataka market has a clear gap: schools either get expensive national platforms (LEAD, Extramarks) that lack Karnataka State Board alignment and Tier 2 affordability — or they get local hardware vendors with no content. <strong>Your company's combined offering of smart classrooms + digital content + VR labs sits exactly in this gap.</strong> Your event positioning should be: "We give you Bengaluru-level technology, Karnataka State Board content, and pricing that works for your school — not a national one-size-fits-all package."</p>
+  </div>
+
+  <h2>How Competitors Run Events in Karnataka</h2>
+  <ul>
+    <li><strong>LEAD:</strong> Principal dinners at Bengaluru hotels (expensive, only in Tier 1). Principal-only, not owner-facing. No ROI language.</li>
+    <li><strong>Extramarks:</strong> Demo centres at their Bengaluru office. Focus on showing content depth. Limited to CBSE schools. No Tier 2 city events.</li>
+    <li><strong>Local vendors:</strong> Walk-in demos at schools, WhatsApp catalogue sharing. No structured event strategy. Win on price alone.</li>
+    <li><strong>The gap:</strong> Nobody is running a structured, outcome-focused, owner-facing event that addresses Karnataka-specific concerns, uses local peer testimonials, and covers Tier 2 cities. This is your white space.</li>
+  </ul>
+</section>
+
+<!-- S6: WHY EVENTS FAIL -->
+<section class="sec" id="s6">
+  <div class="sec-hd">
+    <span class="sec-num">06</span>
+    <h1 class="sec-title">Why Most EdTech Events Fail in Karnataka</h1>
+  </div>
+  <p class="sec-intro">Karnataka school buyers are smart, skeptical, and busy. Here is why most events — even with genuine products — fail to convert in this market.</p>
+
+  <div class="fail-grid">
+    <div class="fail-item">
+      <div class="fail-n">MISTAKE 01</div>
+      <div class="fail-title">National Messaging in a Local Market</div>
+      <div class="fail-body">Using "1,000+ schools across India" as your credibility signal means nothing to a school owner in Mysuru who wants to know: "Is anyone in Mysuru using this?" Karnataka buyers trust local proof, not national scale. If you cannot show a school in their city or their district, they discount your entire pitch.</div>
+    </div>
+    <div class="fail-item">
+      <div class="fail-n">MISTAKE 02</div>
+      <div class="fail-title">Ignoring the BYJU'S Shadow</div>
+      <div class="fail-body">Not acknowledging the trust crisis in the room. Karnataka is where BYJU'S was headquartered. Many attendees have a personal story about EdTech promises that failed. Events that open with product features and pricing, without first addressing this elephant in the room, lose the audience in the first 5 minutes.</div>
+    </div>
+    <div class="fail-item">
+      <div class="fail-n">MISTAKE 03</div>
+      <div class="fail-title">Inviting Only Principals, Not Owners</div>
+      <div class="fail-body">Karnataka's private school budget decisions are almost entirely made by the trust/founder/owner — not the principal. Principals who attend your event return to their school, give a positive report, and then the owner says "Let me think about it." Without the owner in the room, you lose the conversion opportunity every time.</div>
+    </div>
+    <div class="fail-item">
+      <div class="fail-n">MISTAKE 04</div>
+      <div class="fail-title">No Kannada / State Board Answer Ready</div>
+      <div class="fail-body">The first objection from any Karnataka school outside of Bengaluru's premium segment will be: "What about Karnataka State Board content in Kannada?" If your team is not ready with a clear, confident answer (and ideally a demonstration), you lose credibility immediately with the majority of Karnataka's school market.</div>
+    </div>
+    <div class="fail-item">
+      <div class="fail-n">MISTAKE 05</div>
+      <div class="fail-title">No Local Peer Testimonial</div>
+      <div class="fail-body">Showing a case study from a Delhi school or a Mumbai school does not convert a Hubli school owner. They need to hear from a school owner in Karnataka — ideally from a nearby city. If you cannot yet get a Karnataka client on stage, show a video testimonial. If you have no Karnataka clients, your first priority before the event is to create 1-2 showcase school relationships.</div>
+    </div>
+    <div class="fail-item">
+      <div class="fail-n">MISTAKE 06</div>
+      <div class="fail-title">Bengaluru-Only Events, Tier 2 is Ignored</div>
+      <div class="fail-body">Most vendors run events only in Bengaluru and lose the entire Tier 2 Karnataka market. School owners in Mysuru and Hubli-Dharwad will not drive 3–5 hours for a product demo. If you want to convert Tier 2 Karnataka, you need either satellite events in those cities OR a compelling enough Bengaluru event that you offer travel support for selected school leaders — which itself signals how seriously you take them.</div>
+    </div>
+  </div>
+</section>
+
+<!-- S7: EVENT STRATEGY -->
+<section class="sec" id="s7">
+  <div class="sec-hd">
+    <span class="sec-num">07</span>
+    <h1 class="sec-title">Three Karnataka-Specific High-Conversion Event Formats</h1>
+  </div>
+  <p class="sec-intro">Three event formats, each designed for Karnataka's specific buyer psychology, competitive landscape, and local context. Every execution step is office-based and immediately actionable.</p>
+
+  <!-- EVENT 1 -->
+  <div class="ev">
+    <div class="ev-h">
+      <span class="ev-badge">Event Format 01 · Karnataka School Owners + Principals · 25–30 Seats</span>
+      <div class="ev-title">The Karnataka School Leaders' Summit</div>
+      <div class="ev-tag">"How 5 Karnataka Schools Used Smart Technology to Win More Admissions — A Closed Peer Session"</div>
+    </div>
+    <div class="ev-tabs">
+      <button class="ev-tab active" onclick="tab(this,'e1-c')">Concept</button>
+      <button class="ev-tab" onclick="tab(this,'e1-w')">Why It Works</button>
+      <button class="ev-tab" onclick="tab(this,'e1-s')">Execution Steps</button>
+    </div>
+    <div class="ev-panel active" id="e1-c">
+      <ul>
+        <li>A half-day closed event (25–30 seats max) framed 100% around school growth and competitive advantage — not product features</li>
+        <li>Structure: 60% Karnataka school owner/principal peer testimonials → 30% live technology experience zones → 10% structured, time-bound offer</li>
+        <li>Held at your office, with 3 transformed experience zones: smart classroom simulation, VR lab trial, and digital content station with Karnataka State Board content</li>
+        <li>The Karnataka framing is critical — every case study, every speaker, every data point must be from Karnataka schools, not national examples</li>
+        <li>"Summit" framing pre-qualifies: people who attend a "School Leaders' Summit" have already self-identified as decision-makers, not information-browsers</li>
+      </ul>
+    </div>
+    <div class="ev-panel" id="e1-w">
+      <ul>
+        <li>Karnataka school owners respond viscerally to local peer stories. Hearing a fellow school owner from Koramangala or Whitefield describe specific admission numbers is infinitely more credible than national statistics</li>
+        <li>The BYJU'S shadow means vendor-led presentations start at zero trust. Peer-led sessions start at 70% trust — because the speaker has no reason to sell</li>
+        <li>Scarcity (25–30 seats only) triggers genuine FOMO in a market where school owners are used to being mass-marketed to. A limited, invitation-only event signals that you are selective about who you work with — which paradoxically increases desire</li>
+        <li>The live experience zone converts the FOGS-affected skeptic. Once a school owner touches the smart board and sees real Karnataka State Board content on it, the product is no longer abstract — it is real and visible</li>
+        <li>Running the event at your office (not a hotel) signals that this is a working company, not a pitch event. Visitors see your operations, your team, your infrastructure — all of which build trust</li>
+      </ul>
+    </div>
+    <div class="ev-panel" id="e1-s">
+      <ul>
+        <li><strong>Invite (3–4 weeks before):</strong> Personal phone call from a director or senior leader. Script: "We are running a closed 3-hour session for 30 Karnataka school leaders — not a product demo. Two school owners from [city] and [city] will share exactly what changed their admissions numbers this year. I thought of your school specifically." Confirm with a personalised WhatsApp + printed letter on letterhead</li>
+        <li><strong>Secure 2–3 Karnataka speaker clients before anything else.</strong> Reach out to your happiest existing school clients in Karnataka. Offer them: featured recognition, a case study write-up for their school, and gratitude. Without these speakers, postpone the event — the testimonial format only works with real speakers</li>
+        <li><strong>Office transformation:</strong> Zone 1 — live smart classroom simulation (working board + a trained teacher ready to run a 10-min demo lesson in Kannada/English). Zone 2 — VR lab with 2–3 headsets, guided by a team member. Zone 3 — digital content station showing Karnataka State Board Class 8–10 content in Kannada and English</li>
+        <li><strong>Event Programme (3 hours):</strong> 15 min welcome + Karnataka market context (government smart classroom approval, KSEP 2025 mandate) → 20 min: Speaker 1 — School owner from Bengaluru, admission story with numbers → 20 min: Speaker 2 — School owner from Tier 2 city, ROI story → 15 min: Principal's perspective from one of your client schools → 45 min: Hands-on experience zones (open exploration, your team guides naturally — not pushes) → 25 min: "Founding Partner Schools" offer reveal + Q&A → 15 min: 1-on-1 scheduled conversations (pre-assign your team members to target attendees)</li>
+        <li><strong>The Offer:</strong> "Founding Partner School" program — 5 schools selected from today's attendees who commit by [date 7 days away] receive: [specific benefit — e.g., 2 months free teacher training, reduced installation fee, extended content licence]. Print this as a one-page document and hand it out during the offer reveal</li>
+        <li><strong>For Tier 2 city attendees:</strong> Offer 50% travel reimbursement for school owners who come from Mysuru, Mangaluru, Hubli, or Belagavi. This small gesture converts hesitation into attendance and signals genuine respect for their time</li>
+        <li><strong>Follow-up:</strong> WhatsApp + call within 24 hours. "Thank you for joining us yesterday. I'm attaching the case study from [speaker school name]. I'd like to arrange a 30-minute call this week to understand your school's specific situation." Do not send a generic proposal — send a personalised one-page summary</li>
+      </ul>
+    </div>
+    <div class="ev-conv">
+      <span class="ev-conv-lbl">Expected Conversion</span>
+      <span class="ev-conv-rate">20–35%</span>
+      <span class="ev-conv-note">of attendees into serious pipeline within 2 weeks</span>
+    </div>
+  </div>
+
+  <!-- EVENT 2 -->
+  <div class="ev">
+    <div class="ev-h">
+      <span class="ev-badge">Event Format 02 · Karnataka Principals & Academic Heads · 10–12 Seats Per Batch</span>
+      <div class="ev-title">The Future Classroom Experience — Karnataka Edition</div>
+      <div class="ev-tag">"90 Minutes Inside the Classroom Your Students Deserve — A Live Karnataka School Day"</div>
+    </div>
+    <div class="ev-tabs">
+      <button class="ev-tab active" onclick="tab(this,'e2-c')">Concept</button>
+      <button class="ev-tab" onclick="tab(this,'e2-w')">Why It Works</button>
+      <button class="ev-tab" onclick="tab(this,'e2-s')">Execution Steps</button>
+    </div>
+    <div class="ev-panel active" id="e2-c">
+      <ul>
+        <li>Small-batch immersive experience (10–12 principals per session) run 2–3 times per week at your office, continuously over a month</li>
+        <li>Principals experience a complete classroom lesson — as if they were a student — using your smart board, VR lab, and digital content</li>
+        <li>The content used in the demo must be Karnataka State Board curriculum — not generic content. This is critical to convert Karnataka principals</li>
+        <li>Smaller batches mean deeper conversations. A principal who feels heard and understood becomes your strongest internal champion within their school</li>
+        <li>Multiple batches create a continuous pipeline — early attendees refer colleagues, generating organic demand without additional marketing spend</li>
+      </ul>
+    </div>
+    <div class="ev-panel" id="e2-w">
+      <ul>
+        <li>Karnataka principals are held accountable for SSLC and PUC results. When they experience a lesson where student engagement is visibly higher, they immediately connect it to board results — because they live that pressure daily</li>
+        <li>The "student role" experience is psychologically powerful. A principal who sits in the learner seat for 20 minutes feels what their students could feel — this creates emotional ownership that no slide can create</li>
+        <li>Running demos using Karnataka State Board content signals respect for the local curriculum — which is the #1 trust builder for Karnataka educators outside Bengaluru's premium segment</li>
+        <li>VR content creates a "wow" moment principals take back to their school and describe to their owner/management — turning each principal visit into a word-of-mouth sales engine</li>
+        <li>The follow-up call to the school owner directly after the principal's visit creates the crucial bridge: "Your principal was here, they loved it, can we show you the business case?" This is the most elegant conversion bridge in this market</li>
+      </ul>
+    </div>
+    <div class="ev-panel" id="e2-s">
+      <ul>
+        <li><strong>Invite (WhatsApp, informal tone):</strong> "Namaskara — we are running a 90-minute live classroom experience for school leaders before the new academic year. 12 seats per session. We'll be using Karnataka State Board Class 9 Science content on a live smart board and VR lab. Would you like to experience it as a student for 20 minutes? No sales pitch — just the classroom." This phrasing consistently gets responses because it is honest and specific</li>
+        <li><strong>Setup requirements:</strong> A genuine smart classroom setup — not a showpiece. Working board with Class 8–10 Karnataka State Board content loaded. 2–3 VR headsets with curriculum-linked content (photosynthesis, solar system, historical sites in Karnataka). Live quiz/polling tools working. A trained teacher (ideally a Karnataka subject teacher) to run the actual demo lesson</li>
+        <li><strong>Session flow (90 min):</strong> 5 min welcome — "For the next 20 minutes, please experience this as a student, not as an evaluator" → 20 min: Live Karnataka State Board lesson (e.g., Class 9 Science — human body systems, using 3D animations and interactive quiz) → 10 min: VR lab — each principal tries the headset for 3–4 minutes with a specific Karnataka curriculum module → 15 min: Outcomes debrief — "What you felt is what your students would feel every day. Here is what 3 Karnataka schools saw in their data after 6 months" (show real engagement and result metrics from Karnataka client schools) → 20 min: Q&A — customisation for their board, Kannada content availability, implementation timeline → 10 min: Pilot offer presentation (printed document, specific metrics, risk-reversal terms)</li>
+        <li><strong>The Karnataka angle in the debrief:</strong> Show data specifically from Karnataka schools — board marks, teacher satisfaction scores, parent feedback. If you have any SSLC/PUC trend data from client schools, use it here. Numbers from Karnataka schools convert Karnataka principals</li>
+        <li><strong>Post-session action (critical):</strong> The same day the principal attends, call the school owner/management: "Your principal [name] attended our session today. They had a very positive experience with our Karnataka State Board content demonstration. I'd love to set up a 20-minute conversation with you to share what's possible for [school name]." This bridges the academic-financial decision-maker gap in one move</li>
+      </ul>
+    </div>
+    <div class="ev-conv">
+      <span class="ev-conv-lbl">Expected Conversion</span>
+      <span class="ev-conv-rate">25–40%</span>
+      <span class="ev-conv-note">of principals drive an owner conversation within 10 days</span>
+    </div>
+  </div>
+
+  <!-- EVENT 3 -->
+  <div class="ev">
+    <div class="ev-h" style="background:linear-gradient(135deg,#0b0e17,#1a0e05);">
+      <span class="ev-badge" style="color:var(--saffron);border-color:rgba(224,123,16,.3);">★ RECOMMENDED · Event Format 03 · Karnataka School Owners Only · 12–15 Seats</span>
+      <div class="ev-title">The Karnataka School ROI Workshop</div>
+      <div class="ev-tag">"Calculate Your School's ROI Before You Invest — A 90-Minute Business Session for Karnataka School Owners Only"</div>
+    </div>
+    <div class="ev-tabs">
+      <button class="ev-tab active" onclick="tab(this,'e3-c')">Concept</button>
+      <button class="ev-tab" onclick="tab(this,'e3-w')">Why It Works</button>
+      <button class="ev-tab" onclick="tab(this,'e3-s')">Execution Steps</button>
+    </div>
+    <div class="ev-panel active" id="e3-c">
+      <ul>
+        <li>A structured 90-minute workshop for school owners and trustees ONLY — not principals — framed entirely as a business intelligence session</li>
+        <li>Topics: How Karnataka school competition dynamics affect admissions, fee positioning, parent retention, and long-term school brand — and what technology does to each</li>
+        <li>Each attendee uses a printed Karnataka School ROI Calculator to model their own school's specific potential returns using their own real numbers</li>
+        <li>No product features discussed until the final 20 minutes — 70% of the session is business conversation, data, and peer case studies in Karnataka's school market context</li>
+        <li>Attendees leave with a personalised 1-page ROI document — a take-home artifact that keeps the conversation alive and gets shared with co-founders, trustees, and spouses</li>
+      </ul>
+    </div>
+    <div class="ev-panel" id="e3-w">
+      <ul>
+        <li>Karnataka's school owners — especially in Bengaluru — are often entrepreneurs or professionals who built their schools as businesses. Business-language conversations are more natural to them than education-language ones. You meet them where they are</li>
+        <li>The personalised ROI calculator is the most powerful conversion tool in this format. When a school owner from Jayanagar inputs their own numbers — 450 students, ₹85,000 fees, competing with 12 schools in 3km — and sees that 30 additional admissions = ₹25.5L incremental revenue vs. a ₹8L installation cost, the decision becomes obvious on paper</li>
+        <li>Owners-only format signals respect. Every person in the room has decision-making and budget authority. No post-event approval loops. Decisions can be made in the room</li>
+        <li>The Karnataka-specific competitive data makes this unavoidable: showing a map of which schools in their specific area/zone have or are getting smart classrooms creates immediate urgency without any sales pressure</li>
+        <li>Risk reversal — a 60-day pilot with a specific measurable outcome and refund clause — eliminates the FOGS barrier. It tells the owner: "We are so confident, we are putting our money where our mouth is." No local hardware vendor and no national EdTech company in Karnataka currently offers this</li>
+      </ul>
+    </div>
+    <div class="ev-panel" id="e3-s">
+      <ul>
+        <li><strong>Invite (1-on-1 call from a senior leader):</strong> "Namaskara, I'm [name] from [company]. We work with schools in Karnataka on smart classroom technology. I wanted to personally invite you to a 90-minute session we're running for 12 school owners — not a product demo, but a business session where we model what technology investment actually does to admissions and revenue for Karnataka schools. Each owner will build their own ROI model using their school's real numbers. 12 seats only — would [date/time] work for you?" Then send a personalised WhatsApp confirmation</li>
+        <li><strong>Pre-event intake form (send 5 days before):</strong> Current total enrollment, annual fee per student, number of direct competitor schools within 3km, biggest current admissions challenge, main board (CBSE/ICSE/State Board). Use the responses to: (a) personalise the ROI calculator for each attendee, (b) demonstrate during the session that you actually read and understood their situation</li>
+        <li><strong>Session Programme (90 min):</strong>
+          15 min — Karnataka school market reality (show a local competitive heat map: "here are the schools in Bengaluru/Mysuru that already have smart classrooms. Here are the ones that don't yet. Here is where your school sits.") |
+          20 min — 2 Karnataka school owner case studies: real admission numbers before/after, specific revenue impact, implementation timeline |
+          20 min — ROI Workshop: each owner fills in their printed calculator with your facilitator walking through it live. Calculate: incremental admissions × fee = revenue vs. investment cost = payback period |
+          15 min — "What if it doesn't work?" — Directly address FOGS: share your specific post-installation support structure, SLA, and the 60-day pilot offer with refund terms. Do not avoid this. Own it |
+          10 min — 10-minute product experience in the smart classroom (brief, focused, confident — not a full demo) |
+          10 min — Open Q&A + offer for those who decide today</li>
+        <li><strong>The Karnataka-Specific ROI Calculator fields:</strong> Current enrollment → Target enrollment (admission goal) → Annual fee per student → Direct competitors in catchment zone → Estimated % of parents who rank "technology" as top-3 school selection factor (use 60%+ for Bengaluru tech-parent zones, 40–50% for Tier 2 cities) → Calculate incremental admission revenue vs. installation cost → Payback period in months. Print this calculator on quality paper — it is a take-home sales tool</li>
+        <li><strong>The Pilot Offer (print and hand out):</strong> "60-Day Karnataka School Pilot Programme: Install one smart classroom in your school. Run it for 60 days. We measure: teacher satisfaction score (pre vs. post), student in-class engagement (tracked via interaction data), parent perception during one school open day. If none of these improve measurably, we refund 100% of the pilot fee. No questions asked." Print this with your company letterhead. Date it. Sign it. This is the most powerful trust signal available to you</li>
+        <li><strong>Follow-up (within 2 hours of session):</strong> WhatsApp: "Namaskara [name], thank you for joining today's session. I've attached your personalised Karnataka School ROI model [PDF]. Looking at your school's numbers, the payback period is [X] months. I'll call you tomorrow morning at [time] if that works — just to answer any questions and understand if the pilot makes sense for you." Do not send a generic follow-up. Reference their specific numbers</li>
+      </ul>
+    </div>
+    <div class="ev-conv" style="background:#1a0e05;border-top-color:var(--saffron);">
+      <span class="ev-conv-lbl" style="color:var(--saffron);">Expected Conversion</span>
+      <span class="ev-conv-rate">30–45%</span>
+      <span class="ev-conv-note">into pilot agreements within 2 weeks — highest of all three formats</span>
+    </div>
+  </div>
+</section>
+
+<!-- S8: FINAL REC -->
+<section class="sec" id="s8">
+  <div class="sec-hd">
+    <span class="sec-num">08</span>
+    <h1 class="sec-title">Final Recommendation for Karnataka</h1>
+  </div>
+
+  <p class="sec-intro">Based on Karnataka's specific market dynamics, buyer psychology, competitive landscape, and the urgency of the April–June 2026 decision window, here is the precise strategy recommendation.</p>
+
+  <div style="overflow-x:auto;margin-bottom:32px;">
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>School Leaders' Summit</th>
+          <th>Principal Experience</th>
+          <th>★ ROI Workshop</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Target Buyer</td><td>Owners + Principals</td><td>Principals only</td><td>Owners only</td></tr>
+        <tr><td>Est. Conversion Rate</td><td>20–35%</td><td>25–40% to conversation</td><td>30–45% to pilot</td></tr>
+        <tr><td>Addresses BYJU'S FOGS?</td><td>Via peer stories</td><td>Via experience</td><td>Directly + risk reversal</td></tr>
+        <tr><td>Karnataka State Board fit?</td><td>Must include in demo zones</td><td>Critical — use KSB content</td><td>In ROI + product segment</td></tr>
+        <tr><td>Tier 2 Karnataka applicable?</td><td>With travel support incentive</td><td>Best for Bengaluru batches</td><td>Highest Tier 2 conversion</td></tr>
+        <tr><td>Decision-maker in room?</td><td>Mixed (both)</td><td>No budget authority</td><td>100% budget authority</td></tr>
+        <tr><td>Runs weekly/repeatably?</td><td>Monthly max</td><td>2–3 per week</td><td>Bi-weekly batches</td></tr>
+        <tr><td>Resource needed</td><td>High — needs client speakers</td><td>Medium</td><td>Medium — needs calculator</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Recommended Sequence for Karnataka AY 2026–27</h2>
+
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-wk">Now — Week 1–2</div>
+      <div class="tl-title">Secure your Karnataka client speakers + build your ROI calculator</div>
+      <div class="tl-body">Contact your happiest existing Karnataka school clients. Get verbal commitment from 2–3 to speak at the Summit. Simultaneously, build the Karnataka-specific ROI calculator spreadsheet/PDF. These two assets are the foundation of all three event formats.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-wk">Week 2–3</div>
+      <div class="tl-title">Launch ROI Workshop — Batch 1 (Bengaluru owners, 12 seats)</div>
+      <div class="tl-body">Personal calls and WhatsApp to school owners. Pre-work form sent. Session run with full Karnataka competitive data, local case studies, personalised ROI calculator, and pilot offer. Identify hot prospects immediately after.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-wk">Week 3–4</div>
+      <div class="tl-title">Principal Experience batches run simultaneously (2x per week)</div>
+      <div class="tl-body">Target principals from schools where the ROI Workshop owner showed interest. Run parallel batches. Call the owner directly after each principal visit. Stack both events to run concurrently — owner interest + principal experience is the fastest path to a joint decision meeting.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-wk">Week 4–5</div>
+      <div class="tl-title">ROI Workshop Batch 2 — Tier 2 Karnataka (Mysuru, Mangaluru, Hubli)</div>
+      <div class="tl-body">Invite school owners from Tier 2 Karnataka cities. Offer travel reimbursement (₹500–₹1,500 per attendee — minimal cost, massive goodwill). Frame: "What Bengaluru schools are doing right now — and why Mysuru's best schools are next." Same ROI workshop format with city-specific competitive data inserted.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-wk">Week 5–6</div>
+      <div class="tl-title">Joint owner + principal meetings → Pilot agreements signed</div>
+      <div class="tl-body">Bring both decision-makers into a 45-minute joint meeting. Pilot agreement document ready, signed, dated. Speed matters — this window closes in June 2026 for AY 2026–27 decisions.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-wk">Week 6 → School Leaders' Summit</div>
+      <div class="tl-title">Pilot schools installed → Summit with them as speakers</div>
+      <div class="tl-body">Early pilot schools become the testimonial speakers for your School Leaders' Summit. The cycle completes itself. Each cohort of happy clients fuels the next event with the most powerful conversion tool in Karnataka B2B education sales: a real peer telling a real story.</div>
+    </div>
+  </div>
+
+  <div class="pos-blk">
+    <div class="pos-lbl">For Karnataka School Owners</div>
+    <div class="pos-txt">"We help Karnataka schools fill more seats, justify better fees, and become the school tech-savvy parents in your city choose first."</div>
+    <div class="pos-div"></div>
+    <div class="pos-lbl">For Karnataka Principals</div>
+    <div class="pos-txt">"We give your teachers the tools to deliver Karnataka State Board lessons students actually stay engaged in — and the data to prove it."</div>
+    <div class="pos-div"></div>
+    <div class="pos-lbl">Against the FOGS Objection</div>
+    <div class="pos-txt">"We know what happened with BYJU'S. Here are three Karnataka school owners who can tell you exactly what we delivered — and what we didn't promise."</div>
+  </div>
+
+  <h2>Non-Negotiable Success Factors for Karnataka</h2>
+  <ul>
+    <li><strong>Karnataka client speakers first.</strong> Do not run the Summit without at least 2 real Karnataka school owner speakers. This is the foundation everything else rests on</li>
+    <li><strong>Karnataka State Board content visible in every demo.</strong> Every experience zone must show KSB-aligned content in Kannada. This is the single biggest trust-builder for 70% of Karnataka's school market</li>
+    <li><strong>Printed ROI calculator.</strong> Physical paper that attendees fill in and take home. Not a Google Form. Physical = tangible = stays on the desk = keeps the conversation alive</li>
+    <li><strong>Pilot offer in writing, signed, dated.</strong> Printing and signing the pilot offer terms makes it real. Verbal pilot offers do not convert in a post-BYJU'S market</li>
+    <li><strong>Follow up in 24 hours, every time.</strong> Karnataka school decision-makers are busy and distracted. 80% of B2B education leads are lost due to absent follow-up. Call. WhatsApp. Then call again</li>
+    <li><strong>City-specific invite language.</strong> Bengaluru = urgency + competition. Mysuru/Mangaluru = first-mover prestige. Hubli/Belagavi = aspiration and transformation. One message will not work in all four cities</li>
+  </ul>
+
+  <div class="box red" style="margin-top:28px;">
+    <div class="box-title">The Karnataka Timing Window — Do Not Miss It</div>
+    <p>Karnataka school budget decisions for AY 2026–27 are made <strong>April to June 2026</strong> — after SSLC/PUC results (April-May) and before the new academic year (June-July). Schools that decide in this window install over the summer break and are ready for Day 1 of the new year. Schools that miss this window push to AY 2027–28. Start the ROI Workshop in April. The Karnataka admissions season also peaks in February-April — meaning school owners are most acutely aware of their competitive position RIGHT NOW. This is your best recruiting window for events. Every week of delay reduces both urgency and conversion probability.</p>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section class="sec">
+  <div class="sec-hd">
+    <span class="sec-num">REF</span>
+    <h1 class="sec-title">Sources & References</h1>
+  </div>
+  <div class="src-grid">
+    <div class="src">NewsFirst Prime: Karnataka clears smart classrooms for 3,862 govt schools — ₹91.54 crore (Feb 2026)</div>
+    <div class="src">Education for All in India: Karnataka State Education Policy 2025 — Digital Infrastructure Mandate</div>
+    <div class="src">Elets eGov: Karnataka's Education Breakthrough in Digital Space (Jan 2025)</div>
+    <div class="src">Tracxn: EdTech in Bengaluru — 2025 Market & Investments Trends (Nov 2025)</div>
+    <div class="src">IMARC Group: India EdTech Market — Bengaluru as primary hub (2025)</div>
+    <div class="src">IMARC Group: India K-12 Education Market — South India regional analysis (2025)</div>
+    <div class="src">KenResearch: India EdTech Market Outlook to 2030 — Karnataka chapter</div>
+    <div class="src">Wikipedia: Education in Karnataka — 54,529+ primary schools, 9,499 secondary schools</div>
+    <div class="src">Wikipedia: Karnataka Public School — 276 schools with smart classes (as of 2021)</div>
+    <div class="src">DSERT Karnataka: Lesson-Based Assessment 2025–26 — NEP 2020 alignment</div>
+    <div class="src">IMARC Group: Samagra Shiksha Karnataka — PAB Minutes 2024-25</div>
+    <div class="src">RAYSolute Consultants: Indian K-12 EdTech — FOGS Analysis (Feb 2026)</div>
+    <div class="src">Fortune Business Insights: EdTech & Smart Classroom Market 2025–2030</div>
+    <div class="src">AlmaShines: K-12 India 2026 Trends — parent behaviour and school selection (Dec 2025)</div>
+    <div class="src">LeadSquared: Expert Strategy for Scaling EdTech Sales — follow-up data</div>
+    <div class="src">Nexdigm: India EdTech Market Report — Bengaluru, Hyderabad city analysis (Sep 2025)</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="foot">
+  <h2>ಸಾರಾಂಶ — The Bottom Line</h2>
+  <p>Karnataka's school technology market is at an inflection point. ₹91.54 crore in government smart classroom investment has just validated the category. The KSEP 2025 mandates it. Tech-savvy parents in Bengaluru demand it. And Tier 2 Karnataka schools are ready and eager for it. The window for AY 2026–27 is April–June 2026.</p>
+  <ul>
+    <li>Lead with the ROI Workshop — own the business conversation no competitor is having with Karnataka school owners</li>
+    <li>Layer in the Principal Experience — turn principal conviction into the owner's internal champion</li>
+    <li>Build to the Summit — use your early clients as speakers to create a self-sustaining conversion machine</li>
+    <li>Always lead Karnataka conversations with local proof: Karnataka schools, Karnataka data, Karnataka names</li>
+    <li>Address BYJU'S FOGS directly and early — in Karnataka, this earns more trust than any product demo</li>
+    <li>Get the pilot offer in writing, signed, and in the attendee's hand before they leave the room</li>
+  </ul>
+  <p style="margin-top:28px;font-size:11px;color:#333545;font-family:'JetBrains Mono',monospace;">Karnataka EdTech Event Strategy Report · Academic Year 2026–27 · Confidential · March 2026</p>
+</div>
+
+</div><!-- /main -->
+
+<script>
+// Progress bar
+window.addEventListener('scroll',()=>{
+  const e=document.documentElement;
+  document.getElementById('pbar').style.width=(e.scrollTop/(e.scrollHeight-e.clientHeight)*100)+'%';
+});
+
+// Active nav
+const secs=document.querySelectorAll('[id^="s"],#hero');
+const links=document.querySelectorAll('#nav a');
+new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));
+    }
+  });
+},{threshold:.15}).observe.bind(new IntersectionObserver(()=>{}));
+
+// Better nav observer
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){
+      links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id));
+    }
+  });
+},{threshold:.2});
+secs.forEach(s=>obs.observe(s));
+
+// Section fade-in
+const fadeObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});
+},{threshold:.04});
+document.querySelectorAll('.sec').forEach(s=>fadeObs.observe(s));
+
+// Event tabs
+function tab(btn,panelId){
+  const blk=btn.closest('.ev');
+  blk.querySelectorAll('.ev-tab').forEach(t=>t.classList.remove('active'));
+  blk.querySelectorAll('.ev-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+
+// Counter animation on hero
+const counterObs=new IntersectionObserver(entries=>{
+  if(!entries[0].isIntersecting)return;
+  document.querySelectorAll('.hstat .v').forEach(el=>{
+    const orig=el.innerHTML;
+    const nums=orig.match(/[\d,.]+/g);
+    if(!nums)return;
+    const raw=parseFloat(nums[0].replace(',',''));
+    if(isNaN(raw))return;
+    let cur=0;const steps=60;const inc=raw/steps;
+    let i=0;
+    const t=setInterval(()=>{
+      cur+=inc;i++;
+      if(i>=steps){cur=raw;clearInterval(t);}
+      const disp=raw>100?Math.round(cur).toLocaleString():cur.toFixed(raw<10?1:0);
+      el.innerHTML=orig.replace(nums[0],disp);
+    },18);
+  });
+  counterObs.disconnect();
+},{threshold:.5});
+const hero=document.getElementById('hero');
+if(hero)counterObs.observe(hero);
+</script>
+</body>
+</html>
